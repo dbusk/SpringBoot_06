@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-public class HomeController {
+public class HomeController{
 
     @GetMapping("/songform")
     public String loadFormPage(Model model) {
@@ -16,7 +16,7 @@ public class HomeController {
     }
 
     @PostMapping("/songform")
-    public String loadFormPage(@ModelAttribute Song song, Model model){
+    public String loadFormPage(@ModelAttribute Song , Model model){
         model.addAttribute("song", song);
         return "confirmsong";
     }
